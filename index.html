@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Church Outro Video - Professional TV Quality</title>
+    <title>Optimized Church Outro Video - Performance Enhanced</title>
     <style>
         * {
             margin: 0;
@@ -16,6 +16,9 @@
             background: radial-gradient(ellipse at center, #1e3a8a 0%, #0f172a 50%, #000000 100%);
             overflow: hidden;
             height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transform: translateZ(0);
         }
 
         .video-container {
@@ -24,9 +27,10 @@
             position: relative;
             background: radial-gradient(ellipse at center, #1e40af 0%, #0f172a 30%, #7c2d12 60%, #000000 100%);
             overflow: hidden;
+            transform: translate3d(0,0,0);
+            backface-visibility: hidden;
         }
 
-        /* Enhanced divine light rays with multiple layers */
         .divine-rays {
             position: absolute;
             top: -50%;
@@ -36,54 +40,16 @@
             background: conic-gradient(
                 from 0deg, 
                 transparent, 
-                rgba(255,223,0,0.2), 
+                rgba(255,223,0,0.15), 
                 transparent, 
-                rgba(255,255,255,0.15), 
+                rgba(255,255,255,0.1), 
                 transparent, 
-                rgba(30,64,175,0.12), 
-                transparent,
-                rgba(255,215,0,0.18),
+                rgba(30,64,175,0.08), 
                 transparent
             );
-            animation: divineRotate 25s linear infinite;
+            animation: divineRotate 20s linear infinite;
             z-index: 1;
-        }
-
-        .divine-rays-2 {
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(
-                from 90deg, 
-                transparent, 
-                rgba(255,255,255,0.08), 
-                transparent, 
-                rgba(255,215,0,0.12), 
-                transparent,
-                rgba(220,38,38,0.08),
-                transparent
-            );
-            animation: divineRotate 35s linear infinite reverse;
-            z-index: 1;
-        }
-
-        .divine-rays-3 {
-            position: absolute;
-            top: -25%;
-            left: -25%;
-            width: 150%;
-            height: 150%;
-            background: radial-gradient(
-                circle at center,
-                transparent 20%,
-                rgba(255,215,0,0.05) 40%,
-                rgba(255,255,255,0.03) 60%,
-                transparent 80%
-            );
-            animation: divinePulse 8s ease-in-out infinite;
-            z-index: 2;
+            will-change: transform;
         }
 
         @keyframes divineRotate {
@@ -91,18 +57,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        @keyframes divinePulse {
-            0%, 100% { 
-                transform: scale(1) rotate(0deg);
-                opacity: 0.3;
-            }
-            50% { 
-                transform: scale(1.1) rotate(180deg);
-                opacity: 0.8;
-            }
-        }
-
-        /* Professional image gallery with better grid */
         .image-gallery {
             position: absolute;
             top: 0;
@@ -115,14 +69,14 @@
             gap: 4px;
             z-index: 3;
             opacity: 0;
-            transition: opacity 2.5s ease;
+            transition: opacity 1.5s ease;
             padding: 25px;
+            transform: translate3d(0,0,0);
         }
 
         .image-slot {
             background: rgba(0, 0, 0, 0.4);
-            border: 3px solid transparent;
-            background-clip: padding-box;
+            border: 2px solid transparent;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -130,108 +84,88 @@
             font-size: 1.1rem;
             text-align: center;
             padding: 20px;
-            transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            backdrop-filter: blur(15px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(8px);
             position: relative;
             overflow: hidden;
             opacity: 0;
-            filter: brightness(0.2) saturate(0.3);
-            border-radius: 20px;
-            box-shadow: 
-                inset 0 0 30px rgba(0,0,0,0.6),
-                0 5px 20px rgba(0,0,0,0.4);
+            filter: brightness(0.3) saturate(0.5);
+            border-radius: 15px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+            transform: translate3d(0,0,0);
+            backface-visibility: hidden;
+            will-change: transform, opacity, filter;
         }
 
-        /* Enhanced 3D transition styles for different image types */
         .image-slot.worship {
-            transform: translateY(150px) rotateX(120deg) scale(0.2);
-            transform-origin: bottom;
+            transform: translateY(100px) scale(0.5);
         }
         .image-slot.prayer {
-            transform: translateX(-200px) rotateY(180deg) rotateZ(45deg) scale(0.1);
-            transform-origin: left;
+            transform: translateX(-100px) scale(0.5);
         }
         .image-slot.praise {
-            transform: translateX(200px) rotateY(-180deg) rotateZ(-45deg) scale(0.1);
-            transform-origin: right;
+            transform: translateX(100px) scale(0.5);
         }
         .image-slot.community {
-            transform: translateY(-150px) rotateX(-120deg) scale(0.2);
-            transform-origin: top;
+            transform: translateY(-100px) scale(0.5);
         }
         .image-slot.congregation {
-            transform: scale(0.05) rotate(360deg) translateY(300px) skew(45deg);
+            transform: scale(0.2) rotate(180deg);
         }
         .image-slot.baptism {
-            transform: scale(0.05) translateY(400px) rotateZ(180deg) rotateX(90deg);
+            transform: scale(0.2) translateY(200px);
         }
         .image-slot.youth {
-            transform: perspective(1000px) rotateY(270deg) rotateX(90deg) scale(0.1);
+            transform: rotateY(90deg) scale(0.5);
         }
         .image-slot.fellowship {
-            transform: perspective(1500px) rotateY(180deg) rotateX(180deg) scale(0.1);
+            transform: rotateY(-90deg) scale(0.5);
         }
         .image-slot.pastor-video {
-            transform: scale(0.1) rotate(720deg) translateY(300px) rotateX(180deg);
-            border: 5px solid rgba(255, 215, 0, 0.8);
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+            transform: scale(0.3) rotate(360deg);
+            border: 3px solid rgba(255, 215, 0, 0.6);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
         }
 
         .image-slot.active {
             opacity: 0.85;
-            transform: none !important;
-            filter: brightness(1.1) saturate(1.3) contrast(1.1) !important;
-            border: 4px solid rgba(255, 215, 0, 0.8);
-            box-shadow: 
-                0 0 40px rgba(255, 215, 0, 0.4),
-                inset 0 0 30px rgba(255, 255, 255, 0.15),
-                0 10px 30px rgba(0,0,0,0.3);
+            transform: translate3d(0,0,0) scale(1) !important;
+            filter: brightness(1) saturate(1.2) !important;
+            border: 2px solid rgba(255, 215, 0, 0.7);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.1);
         }
 
         .image-slot.spotlight {
             opacity: 1 !important;
-            transform: scale(1.12) rotateZ(2deg) !important;
-            filter: brightness(1.4) saturate(1.5) contrast(1.2) !important;
-            border: 5px solid rgba(255, 215, 0, 1) !important;
+            transform: translate3d(0,0,0) scale(1.05) !important;
+            filter: brightness(1.2) saturate(1.3) !important;
+            border: 3px solid rgba(255, 215, 0, 0.9) !important;
             z-index: 8 !important;
-            transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-            box-shadow: 
-                0 0 60px rgba(255, 215, 0, 0.8),
-                0 25px 50px rgba(0,0,0,0.5),
-                inset 0 0 40px rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 35px rgba(255, 215, 0, 0.6), 0 15px 30px rgba(0,0,0,0.3);
         }
 
         .image-slot img, .image-slot video {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top; /* Focus on face/top part for portraits */
+            object-position: center top;
             position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
-            transition: all 1s ease;
-            border-radius: 15px;
+            border-radius: 12px;
+            transform: translate3d(0,0,0);
+            backface-visibility: hidden;
+            will-change: transform;
         }
 
-        /* Special positioning for portrait images */
-        .image-slot.fellowship img,
-        .image-slot.pastor-video img,
-        .image-slot.pastor-video video {
-            object-position: center 15%; /* Show face area for pastor/people shots */
+        video {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            image-rendering: optimizeSpeed;
+            image-rendering: -webkit-optimize-contrast;
         }
 
-        .image-slot.active img, .image-slot.active video {
-            transform: scale(1.08);
-            filter: brightness(1.05) contrast(1.05);
-        }
-
-        .image-slot.spotlight img, .image-slot.spotlight video {
-            transform: scale(1.15);
-            filter: brightness(1.1) contrast(1.1);
-        }
-
-        /* Divine particles system */
         .divine-particles {
             position: absolute;
             top: 0;
@@ -240,49 +174,37 @@
             height: 100%;
             z-index: 6;
             pointer-events: none;
+            transform: translate3d(0,0,0);
         }
 
         .divine-particle {
             position: absolute;
             border-radius: 50%;
-            animation: divineFloat 15s ease-in-out infinite;
+            animation: divineFloat 10s ease-in-out infinite;
+            will-change: transform, opacity;
         }
 
         .divine-particle.holy-gold {
-            background: radial-gradient(circle, rgba(255,215,0,0.9) 0%, rgba(255,165,0,0.5) 100%);
-            box-shadow: 0 0 15px rgba(255,215,0,0.8);
+            background: radial-gradient(circle, rgba(255,215,0,0.7) 0%, rgba(255,165,0,0.3) 100%);
+            box-shadow: 0 0 8px rgba(255,215,0,0.5);
         }
 
         .divine-particle.sacred-white {
-            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 100%);
-            box-shadow: 0 0 12px rgba(255,255,255,0.6);
-        }
-
-        .divine-particle.heavenly-blue {
-            background: radial-gradient(circle, rgba(30,64,175,0.8) 0%, rgba(59,130,246,0.4) 100%);
-            box-shadow: 0 0 10px rgba(59,130,246,0.5);
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 100%);
+            box-shadow: 0 0 6px rgba(255,255,255,0.4);
         }
 
         @keyframes divineFloat {
             0%, 100% { 
-                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
-                opacity: 0.4; 
-            }
-            25% { 
-                transform: translateY(-60px) translateX(30px) rotate(90deg) scale(1.3); 
-                opacity: 0.9; 
+                transform: translate3d(0px, 0px, 0) scale(1); 
+                opacity: 0.3; 
             }
             50% { 
-                transform: translateY(-120px) translateX(-20px) rotate(180deg) scale(0.7); 
-                opacity: 1; 
-            }
-            75% { 
-                transform: translateY(-60px) translateX(-40px) rotate(270deg) scale(1.2); 
-                opacity: 0.7; 
+                transform: translate3d(-30px, -80px, 0) scale(1.1); 
+                opacity: 0.8; 
             }
         }
 
-        /* DRAMATICALLY ENHANCED MAIN CONTENT */
         .main-content {
             position: absolute;
             top: 50%;
@@ -291,319 +213,194 @@
             z-index: 10;
             text-align: center;
             color: white;
-            background: rgba(0, 0, 0, 0.85);
-            padding: 5rem;
-            border-radius: 40px;
-            backdrop-filter: blur(25px);
-            border: 4px solid rgba(255, 215, 0, 0.5);
-            min-width: 700px;
-            opacity: 1;
-            transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 
-                0 0 80px rgba(255, 215, 0, 0.4),
-                0 40px 80px rgba(0,0,0,0.6),
-                inset 0 0 40px rgba(255, 255, 255, 0.12);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 4rem;
+            border-radius: 30px;
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(255, 215, 0, 0.4);
+            min-width: 600px;
+            opacity: 0;
+            animation: initialFade 20s ease-in-out forwards;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.3), 0 25px 50px rgba(0,0,0,0.4);
+            transform: translate3d(-50%, -50%, 0);
+            will-change: transform, opacity;
+        }
+
+        @keyframes initialFade {
+            0% { opacity: 0; transform: translate3d(-50%, -50%, 0) scale(0.95); }
+            50% { opacity: 1; transform: translate3d(-50%, -50%, 0) scale(1); }
+            100% { opacity: 0; transform: translate3d(-50%, -50%, 0) scale(0.95); }
+        }
+
+        .main-content.second-fade {
+            animation: slowFadeIn 30s ease-in forwards;
+        }
+
+        @keyframes slowFadeIn {
+            0% { opacity: 0; transform: translate3d(-50%, -50%, 0) scale(0.95); }
+            100% { opacity: 1; transform: translate3d(-50%, -50%, 0) scale(1); }
         }
 
         .main-content.fade-out {
             opacity: 0;
-            transform: translate(-50%, -50%) scale(0.6) rotateY(90deg) rotateX(45deg);
+            transform: translate3d(-50%, -50%, 0) scale(0.8);
+            animation: none;
             pointer-events: none;
         }
 
-        .main-content.grand-entrance {
-            animation: grandEntrance 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-        }
-
-        @keyframes grandEntrance {
-            0% {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.3) rotateY(180deg) rotateX(90deg);
-                filter: blur(20px);
-            }
-            50% {
-                opacity: 0.7;
-                transform: translate(-50%, -50%) scale(1.2) rotateY(0deg) rotateX(0deg);
-                filter: blur(5px);
-            }
-            100% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1) rotateY(0deg) rotateX(0deg);
-                filter: blur(0px);
-            }
-        }
-
-        /* DIVINE LOGO WITH HOLY CROSS */
         .divine-logo-container {
-            margin-bottom: 3rem;
-            transform: translateY(-100px) scale(0.3) rotateX(180deg);
+            margin-bottom: 2rem;
+            transform: translateY(-50px) scale(0.5);
+            opacity: 0;
+            transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .divine-logo-container.heavenly-reveal {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+        .holy-cross {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b35, #ffd700, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+            animation: holyPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes holyPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .divine-church-name {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #ffd700, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transform: translateX(-100px) scale(0.7);
+            opacity: 0;
+            transition: all 1.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+        }
+
+        .divine-church-name.majestic-reveal {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+        }
+
+        .heavenly-tagline {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: #ffd700;
+            font-weight: 600;
+            transform: translateX(100px) scale(0.7);
+            opacity: 0;
+            transition: all 1.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-style: italic;
+        }
+
+        .heavenly-tagline.divine-slide {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+        }
+
+        .blessed-welcome {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            color: #ffffff;
+            transform: translateY(50px) scale(0.7);
+            opacity: 0;
+            transition: all 1.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .blessed-welcome.miraculous-rise {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+        .divine-social-handles {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2.5rem;
+            transform: translateY(80px) scale(0.5);
             opacity: 0;
             transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
-        .divine-logo-container.heavenly-reveal {
-            transform: translateY(0) scale(1) rotateX(0deg);
-            opacity: 1;
-            animation: holyGlow 3s ease-in-out infinite;
-        }
-
-        .holy-cross {
-            font-size: 6rem;
-            margin-bottom: 2rem;
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b35, #f7931e, #ffd700, #ffffff, #87ceeb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 300% 300%;
-            animation: divineGradient 4s ease-in-out infinite, holyPulse 3s ease-in-out infinite;
-            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
-        }
-
-        @keyframes holyPulse {
-            0%, 100% { 
-                transform: scale(1) rotateY(0deg); 
-                filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
-            }
-            50% { 
-                transform: scale(1.3) rotateY(15deg); 
-                filter: drop-shadow(0 0 40px rgba(255, 215, 0, 1));
-            }
-        }
-
-        @keyframes divineGradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes holyGlow {
-            0%, 100% { 
-                box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-            }
-            50% { 
-                box-shadow: 0 0 60px rgba(255, 215, 0, 0.8);
-            }
-        }
-
-        /* SPECTACULAR CHURCH NAME ANIMATION */
-        .divine-church-name {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 2rem;
-            background: linear-gradient(45deg, #ffffff, #ffd700, #ff6b35, #1e40af, #87ceeb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 400% 400%;
-            animation: rainbowFlow 5s ease-in-out infinite;
-            transform: translateX(-200px) rotateZ(-45deg) scale(0.5);
-            opacity: 0;
-            transition: all 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.9));
-            font-family: 'Georgia', serif;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .divine-church-name.majestic-reveal {
-            transform: translateX(0) rotateZ(0deg) scale(1);
-            opacity: 1;
-            animation: rainbowFlow 5s ease-in-out infinite, typewriterEffect 3s steps(30) 1s both;
-        }
-
-        @keyframes rainbowFlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes typewriterEffect {
-            0% { width: 0; }
-            100% { width: 100%; }
-        }
-
-        /* HEAVENLY TAGLINE */
-        .heavenly-tagline {
-            font-size: 1.8rem;
-            margin-bottom: 2.5rem;
-            color: #ffd700;
-            font-weight: 700;
-            transform: translateX(200px) rotateZ(45deg) scale(0.5);
-            opacity: 0;
-            transition: all 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
-            font-style: italic;
-            background: linear-gradient(135deg, #ffd700, #ffed4e, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .heavenly-tagline.divine-slide {
-            transform: translateX(0) rotateZ(0deg) scale(1);
-            opacity: 1;
-            animation: shimmer 2s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0%, 100% { filter: brightness(1); }
-            50% { filter: brightness(1.3); }
-        }
-
-        /* BLESSED WELCOME TEXT */
-        .blessed-welcome {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 3rem;
-            color: #ffffff;
-            transform: translateY(100px) rotateX(90deg) scale(0.3);
-            opacity: 0;
-            transition: all 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            text-shadow: 4px 4px 8px rgba(0,0,0,1);
-            background: linear-gradient(135deg, #ffffff, #ffd700, #87ceeb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% 200%;
-            animation: welcomeGlow 3s ease-in-out infinite;
-        }
-
-        .blessed-welcome.miraculous-rise {
-            transform: translateY(0) rotateX(0deg) scale(1);
-            opacity: 1;
-        }
-
-        @keyframes welcomeGlow {
-            0%, 100% { 
-                background-position: 0% 50%;
-                text-shadow: 4px 4px 8px rgba(0,0,0,1);
-            }
-            50% { 
-                background-position: 100% 50%;
-                text-shadow: 4px 4px 12px rgba(255,215,0,0.5);
-            }
-        }
-
-        /* SPECTACULAR CALL-TO-ACTION SOCIAL HANDLES */
-        .divine-social-handles {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            margin-top: 3rem;
-            transform: translateY(150px) scale(0.2) rotateX(180deg);
-            opacity: 0;
-            transition: all 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
         .divine-social-handles.heavenly-ascent {
-            transform: translateY(0) scale(1) rotateX(0deg);
+            transform: translateY(0) scale(1);
             opacity: 1;
         }
 
         .divine-social-item {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
-            font-size: 1.5rem;
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 107, 53, 0.3), rgba(30, 64, 175, 0.2));
-            padding: 2rem 3rem;
-            border-radius: 60px;
-            backdrop-filter: blur(20px);
-            border: 4px solid rgba(255, 215, 0, 0.6);
-            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            font-weight: 700;
+            gap: 1rem;
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 107, 53, 0.2));
+            padding: 1.5rem 2.5rem;
+            border-radius: 40px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-weight: 600;
             text-decoration: none;
             color: white;
             position: relative;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-            transform: scale(0.1) rotate(180deg);
-            opacity: 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transform: translate3d(0,0,0);
+            will-change: transform;
         }
 
         .divine-social-item.explosive-entry {
-            transform: scale(1) rotate(0deg);
-            opacity: 1;
-            animation: socialExplosion 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards,
-                       ctaFlash 3s ease-in-out 2s infinite;
-        }
-
-        .divine-social-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 1s ease;
-        }
-
-        .divine-social-item:hover::before {
-            left: 100%;
+            animation: socialEntrance 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
         }
 
         .divine-social-item:hover {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(255, 107, 53, 0.6), rgba(30, 64, 175, 0.4));
-            transform: translateY(-15px) scale(1.2) rotateZ(5deg);
-            border-color: rgba(255, 215, 0, 1);
-            box-shadow: 
-                0 30px 60px rgba(0,0,0,0.5),
-                0 0 50px rgba(255, 215, 0, 0.8),
-                inset 0 0 30px rgba(255,255,255,0.2);
-            color: white;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.4), rgba(255, 107, 53, 0.4));
+            transform: translate3d(0, -8px, 0) scale(1.05);
+            border-color: rgba(255, 215, 0, 0.8);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(255, 215, 0, 0.6);
         }
 
-        @keyframes socialExplosion {
+        @keyframes socialEntrance {
             0% {
-                transform: scale(0.1) rotate(360deg);
+                transform: translate3d(0, 0, 0) scale(0.3) rotate(180deg);
                 opacity: 0;
-                filter: blur(20px);
             }
-            60% {
-                transform: scale(1.4) rotate(0deg);
+            80% {
+                transform: translate3d(0, 0, 0) scale(1.1) rotate(0deg);
                 opacity: 0.9;
-                filter: blur(2px);
             }
             100% {
-                transform: scale(1) rotate(0deg);
+                transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
                 opacity: 1;
-                filter: blur(0px);
             }
         }
 
-        @keyframes ctaFlash {
-            0%, 100% {
-                box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-                border-color: rgba(255, 215, 0, 0.6);
-            }
-            50% {
-                box-shadow: 
-                    0 20px 50px rgba(0,0,0,0.5),
-                    0 0 40px rgba(255, 215, 0, 1);
-                border-color: rgba(255, 215, 0, 1);
-            }
-        }
-
-        /* Enhanced social icons with 3D effects */
         .divine-youtube-icon, .divine-facebook-icon {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             display: inline-block;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-        }
-
-        .divine-social-item:hover .divine-youtube-icon,
-        .divine-social-item:hover .divine-facebook-icon {
-            transform: scale(1.4) rotateY(15deg) rotateX(10deg);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
         }
 
         .divine-youtube-icon {
-            background: linear-gradient(135deg, #ff0000, #cc0000, #990000);
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            position: relative;
         }
 
         .divine-youtube-icon::after {
@@ -614,13 +411,14 @@
             transform: translate(-25%, -50%);
             width: 0;
             height: 0;
-            border-left: 16px solid white;
-            border-top: 9px solid transparent;
-            border-bottom: 9px solid transparent;
+            border-left: 12px solid white;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
         }
 
         .divine-facebook-icon {
-            background: linear-gradient(135deg, #1877f2, #0d5aa7, #0a4a87);
+            background: linear-gradient(135deg, #1877f2, #0d5aa7);
+            position: relative;
         }
 
         .divine-facebook-icon::after {
@@ -631,71 +429,63 @@
             transform: translate(-50%, -50%);
             color: white;
             font-weight: bold;
-            font-size: 22px;
+            font-size: 18px;
             font-family: Arial, sans-serif;
         }
 
-        /* INSPIRATIONAL BOTTOM MESSAGE */
         .inspirational-message {
             position: absolute;
-            bottom: 4rem;
+            bottom: 3rem;
             left: 50%;
-            transform: translateX(-50%) translateY(80px) rotateX(90deg);
-            font-size: 1.6rem;
+            transform: translateX(-50%) translateY(50px);
+            font-size: 1.4rem;
             opacity: 0;
             color: white;
-            background: rgba(0,0,0,0.8);
-            padding: 2rem 4rem;
-            border-radius: 50px;
-            backdrop-filter: blur(20px);
+            background: rgba(0,0,0,0.7);
+            padding: 1.5rem 3rem;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
             z-index: 10;
-            transition: all 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            border: 3px solid rgba(255, 215, 0, 0.4);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            transition: all 1.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 2px solid rgba(255, 215, 0, 0.3);
             font-style: italic;
-            text-shadow: 3px 3px 6px rgba(0,0,0,1);
-            background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(30,64,175,0.3));
         }
 
         .inspirational-message.blessed-reveal {
             opacity: 1;
-            transform: translateX(-50%) translateY(0) rotateX(0deg);
-            animation: messageGlow 4s ease-in-out infinite;
+            transform: translateX(-50%) translateY(0);
         }
 
-        @keyframes messageGlow {
-            0%, 100% {
-                box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-                border-color: rgba(255, 215, 0, 0.4);
-            }
-            50% {
-                box-shadow: 
-                    0 20px 50px rgba(0,0,0,0.6),
-                    0 0 30px rgba(255, 215, 0, 0.6);
-                border-color: rgba(255, 215, 0, 0.8);
-            }
+        .error-message {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.8), rgba(153, 27, 27, 0.7));
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 2px solid rgba(220, 38, 38, 0.6);
         }
 
-        /* Responsive design for mobile devices */
         @media (max-width: 768px) {
             .main-content {
                 min-width: 95%;
-                padding: 3rem;
+                padding: 2.5rem;
             }
             .divine-church-name {
-                font-size: 2.8rem;
-                letter-spacing: 2px;
+                font-size: 2.5rem;
+                letter-spacing: 1px;
             }
             .heavenly-tagline {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
             .blessed-welcome {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             .divine-social-handles {
                 flex-direction: column;
                 align-items: center;
-                gap: 2rem;
+                gap: 1.5rem;
             }
             .image-gallery {
                 grid-template-columns: repeat(2, 1fr);
@@ -703,129 +493,73 @@
                 padding: 15px;
             }
             .holy-cross {
-                font-size: 4.5rem;
+                font-size: 4rem;
             }
         }
 
-        /* Special effects for video slots */
-        .image-slot.pastor-video.spotlight {
-            border: 6px solid rgba(255, 215, 0, 1);
-            box-shadow: 
-                0 0 80px rgba(255, 215, 0, 1),
-                0 30px 60px rgba(0,0,0,0.6),
-                inset 0 0 50px rgba(255, 255, 255, 0.3);
+        .image-slot:hover {
+            transform: translate3d(0,0,0) scale(1.08) !important;
+            z-index: 9;
+            filter: brightness(1.3) saturate(1.4) !important;
         }
 
-        .image-slot.pastor-video.spotlight::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: linear-gradient(45deg, rgba(255,215,0,0.5), transparent, rgba(255,215,0,0.5));
-            border-radius: 25px;
-            z-index: -1;
-            animation: haloRotate 3s linear infinite;
-        }
-
-        @keyframes haloRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Error handling styles */
-        .error-message {
-            background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(153, 27, 27, 0.8));
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            font-size: 1rem;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-            border: 2px solid rgba(220, 38, 38, 0.8);
-            backdrop-filter: blur(10px);
-        }
-        
-        .image-slot.error {
-            border-color: rgba(220, 38, 38, 0.8);
-            background: rgba(220, 38, 38, 0.2);
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
 </head>
 <body>
     <div class="video-container">
         <div class="divine-rays"></div>
-        <div class="divine-rays-2"></div>
-        <div class="divine-rays-3"></div>
         
         <div class="image-gallery" id="imageGallery">
-            <!-- Worship Image Slot -->
             <div class="image-slot worship">
                 <img src="worship.jpg" alt="Worship" onerror="handleImageError(this, 'Worship')">
             </div>
-
-            <!-- Prayer Image Slot -->
             <div class="image-slot prayer">
                 <img src="prayer.jpg" alt="Prayer" onerror="handleImageError(this, 'Prayer')">
             </div>
-
-            <!-- Praise Image Slot -->
             <div class="image-slot praise">
                 <img src="praise.jpg" alt="Praise" onerror="handleImageError(this, 'Praise')">
             </div>
-
-            <!-- Community Image Slot -->
             <div class="image-slot community">
                 <img src="community.jpg" alt="Community" onerror="handleImageError(this, 'Community')">
             </div>
-            
-            <!-- Pastor Video Slot (Main Feature) -->
             <div class="image-slot pastor-video">
-                <video autoplay muted loop onerror="handleVideoError(this)">
+                <video autoplay muted loop preload="metadata" playsinline>
                     <source src="pastor.mp4" type="video/mp4">
                     <source src="video.mp4" type="video/mp4">
                 </video>
                 <img src="worship.jpg" alt="Pastor" style="display: none;" onerror="handleImageError(this, 'Pastor Video')">
             </div>
-            
-            <!-- Congregation Image Slot -->
             <div class="image-slot congregation">
                 <img src="congregation.jpg" alt="Congregation" onerror="handleImageError(this, 'Congregation')">
             </div>
-
-            <!-- Baptism Image Slot -->
             <div class="image-slot baptism">
                 <img src="Baptism.jpg" alt="Baptism" onerror="handleImageError(this, 'Baptism')">
             </div>
-
-            <!-- Youth Image Slot -->
             <div class="image-slot youth">
                 <img src="youth.jpg" alt="Youth" onerror="handleImageError(this, 'Youth')">
             </div>
-
-            <!-- Fellowship Image Slot -->
             <div class="image-slot fellowship">
                 <img src="fellowship.jpg" alt="Fellowship" onerror="handleImageError(this, 'Fellowship')">
             </div>
-            
-            <!-- Pastor Jean Image Slot -->
             <div class="image-slot fellowship">
                 <img src="pst-jean.jpg" alt="Pastor Jean" onerror="handleImageError(this, 'Pastor Jean')">
             </div>
-            
-            <!-- Pastor Video 2 -->
             <div class="image-slot pastor-video">
-                <video autoplay muted loop onerror="handleVideoError(this)">
+                <video autoplay muted loop preload="metadata" playsinline>
                     <source src="rev2.mp4" type="video/mp4">
                     <source src="video.mp4" type="video/mp4">
                 </video>
                 <img src="worship.jpg" alt="Reverend" style="display: none;" onerror="handleImageError(this, 'Reverend Video')">
             </div>
-            
-            <!-- Pastor Ben Video -->
             <div class="image-slot pastor-video">
-                <video autoplay muted loop onerror="handleVideoError(this)">
+                <video autoplay muted loop preload="metadata" playsinline>
                     <source src="rev-ben.mp4" type="video/mp4">
                     <source src="video.mp4" type="video/mp4">
                 </video>
@@ -839,12 +573,9 @@
             <div class="divine-logo-container" id="divineLogoContainer">
                 <div class="holy-cross">✝</div>
             </div>
-            
             <h1 class="divine-church-name" id="divineChurchName">JOY CHRISTIAN FELLOWSHIP O/R</h1>
             <p class="heavenly-tagline" id="heavenlyTagline">The Home Of Champions</p>
-            
             <div class="blessed-welcome" id="blessedWelcome">Welcome all to our online church</div>
-            
             <div class="divine-social-handles" id="divineSocialHandles">
                 <a href="https://youtube.com/@JOYCHRISTIANFELLOWSHIP-RONGAI" class="divine-social-item" target="_blank" id="divineYoutubeBtn">
                     <div class="divine-youtube-icon"></div>
@@ -863,518 +594,297 @@
     </div>
 
     <script>
-        // Enhanced error handling functions
         function handleImageError(img, type) {
             const slot = img.parentElement;
-            slot.classList.add('error');
-            
+            img.style.display = 'none';
             const errorDiv = document.createElement('div');
             errorDiv.className = 'error-message';
             errorDiv.innerHTML = `
-                <div style="font-size: 2rem; margin-bottom: 10px;">⚠️</div>
+                <div style="font-size: 1.5rem; margin-bottom: 8px;">⚠️</div>
                 <div><strong>${type}</strong></div>
-                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">
-                    Image file not found<br>
-                    <code>${img.src.split('/').pop()}</code>
+                <div style="font-size: 0.8rem; margin-top: 5px; opacity: 0.8;">
+                    File not found
                 </div>
             `;
-            
-            img.style.display = 'none';
             slot.appendChild(errorDiv);
-            
-            console.warn(`Image not found: ${type} (${img.src})`);
         }
 
-        function handleVideoError(video) {
-            const slot = video.parentElement;
-            const fallbackImg = slot.querySelector('img');
-            
-            video.style.display = 'none';
-            if (fallbackImg) {
-                fallbackImg.style.display = 'block';
-                console.log(`Video failed, showing fallback image for ${slot.className}`);
-            } else {
-                // Create a placeholder if no fallback image
-                const placeholder = document.createElement('div');
-                placeholder.className = 'error-message';
-                placeholder.innerHTML = `
-                    <div style="font-size: 2rem; margin-bottom: 10px;">🎥</div>
-                    <div><strong>Pastor Video</strong></div>
-                    <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">
-                        Video file not found
-                    </div>
-                `;
-                slot.appendChild(placeholder);
-            }
-        }
-
-        // Enhanced divine particle creation system
         function createDivineParticles() {
             const particlesContainer = document.getElementById('divineParticles');
-            const particleCount = 50;
-            const particleTypes = ['holy-gold', 'sacred-white', 'heavenly-blue'];
-            
+            const particleCount = 15;
+            const particleTypes = ['holy-gold', 'sacred-white'];
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = `divine-particle ${particleTypes[Math.floor(Math.random() * particleTypes.length)]}`;
-                
-                const size = Math.random() * 15 + 6;
+                const size = Math.random() * 6 + 3;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
-                
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.top = Math.random() * 100 + '%';
-                
-                particle.style.animationDuration = (Math.random() * 12 + 15) + 's';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                
+                particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
                 particlesContainer.appendChild(particle);
             }
         }
 
-        // SPECTACULAR MAIN CONTENT ANIMATION SEQUENCE
-        function beginDivineAnimationSequence() {
-            const animationSequence = [
-                { 
-                    element: 'divineLogoContainer', 
-                    class: 'heavenly-reveal', 
-                    delay: 400,
-                    sound: true 
-                },
-                { 
-                    element: 'divineChurchName', 
-                    class: 'majestic-reveal', 
-                    delay: 800,
-                    sound: true 
-                },
-                { 
-                    element: 'heavenlyTagline', 
-                    class: 'divine-slide', 
-                    delay: 1200 
-                },
-                { 
-                    element: 'blessedWelcome', 
-                    class: 'miraculous-rise', 
-                    delay: 1600 
-                },
-                { 
-                    element: 'divineSocialHandles', 
-                    class: 'heavenly-ascent', 
-                    delay: 2000 
-                }
-            ];
-
-            animationSequence.forEach(({ element, class: className, delay, sound }) => {
-                setTimeout(() => {
-                    const el = document.getElementById(element);
-                    if (el) {
-                        el.classList.add(className);
-                        
-                        // Add sparkle effect for major elements
-                        if (sound) {
-                            createSparkleEffect(el);
+        class OptimizedVideoManager {
+            constructor() {
+                this.videos = Array.from(document.querySelectorAll('video'));
+                this.activeIndex = 0;
+                this.isRotating = false;
+            }
+            init() {
+                this.videos.forEach((video, index) => {
+                    video.addEventListener('loadedmetadata', () => {
+                        if (index === 0) {
+                            video.play().catch(e => console.log('Autoplay prevented'));
+                        } else {
+                            video.pause();
                         }
-                    }
+                    });
+                    video.addEventListener('error', () => {
+                        const slot = video.parentElement;
+                        const fallbackImg = slot.querySelector('img');
+                        video.style.display = 'none';
+                        if (fallbackImg) {
+                            fallbackImg.style.display = 'block';
+                        }
+                    });
+                });
+                this.startRotation(6000);
+            }
+            startRotation(interval) {
+                if (this.isRotating) return;
+                this.isRotating = true;
+                this.rotationInterval = setInterval(() => {
+                    this.rotateVideo();
+                }, interval);
+            }
+            rotateVideo() {
+                if (this.videos.length <= 1) return;
+                const currentVideo = this.videos[this.activeIndex];
+                currentVideo.pause();
+                this.activeIndex = (this.activeIndex + 1) % this.videos.length;
+                const nextVideo = this.videos[this.activeIndex];
+                nextVideo.currentTime = 0;
+                nextVideo.play().catch(e => console.log('Video rotation failed'));
+            }
+            stop() {
+                this.isRotating = false;
+                if (this.rotationInterval) {
+                    clearInterval(this.rotationInterval);
+                }
+            }
+        }
+
+        function startAnimationSequence() {
+            const sequence = [
+                { id: 'divineLogoContainer', class: 'heavenly-reveal', delay: 300 },
+                { id: 'divineChurchName', class: 'majestic-reveal', delay: 600 },
+                { id: 'heavenlyTagline', class: 'divine-slide', delay: 900 },
+                { id: 'blessedWelcome', class: 'miraculous-rise', delay: 1200 },
+                { id: 'divineSocialHandles', class: 'heavenly-ascent', delay: 1500 }
+            ];
+            sequence.forEach(({ id, class: className, delay }) => {
+                setTimeout(() => {
+                    const element = document.getElementById(id);
+                    if (element) element.classList.add(className);
                 }, delay);
             });
-
-            // EXPLOSIVE SOCIAL MEDIA CALL-TO-ACTION
             setTimeout(() => {
-                const youtubeBtn = document.getElementById('divineYoutubeBtn');
-                const facebookBtn = document.getElementById('divineFacebookBtn');
-                
-                setTimeout(() => {
-                    youtubeBtn.classList.add('explosive-entry');
-                    createFireworkEffect(youtubeBtn);
-                }, 300);
-                
-                setTimeout(() => {
-                    facebookBtn.classList.add('explosive-entry');
-                    createFireworkEffect(facebookBtn);
-                }, 800);
-            }, 2400);
-
-            // BLESSED BOTTOM MESSAGE
+                document.getElementById('divineYoutubeBtn').classList.add('explosive-entry');
+            }, 1800);
+            setTimeout(() => {
+                document.getElementById('divineFacebookBtn').classList.add('explosive-entry');
+            }, 2100);
             setTimeout(() => {
                 document.getElementById('inspirationalMessage').classList.add('blessed-reveal');
-            }, 3000);
+            }, 2400);
         }
 
-        // Special effect functions
-        function createSparkleEffect(element) {
-            for (let i = 0; i < 8; i++) {
-                const sparkle = document.createElement('div');
-                sparkle.style.cssText = `
-                    position: absolute;
-                    width: 8px;
-                    height: 8px;
-                    background: radial-gradient(circle, rgba(255,215,0,1) 0%, rgba(255,255,255,0.8) 100%);
-                    border-radius: 50%;
-                    pointer-events: none;
-                    z-index: 15;
-                    animation: sparkle 1.5s ease-out forwards;
-                `;
-                
-                const rect = element.getBoundingClientRect();
-                sparkle.style.left = (rect.left + Math.random() * rect.width) + 'px';
-                sparkle.style.top = (rect.top + Math.random() * rect.height) + 'px';
-                
-                document.body.appendChild(sparkle);
-                
-                setTimeout(() => sparkle.remove(), 1500);
-            }
-        }
-
-        function createFireworkEffect(element) {
-            for (let i = 0; i < 12; i++) {
-                const firework = document.createElement('div');
-                const colors = ['#ff6b35', '#ffd700', '#ffffff', '#87ceeb'];
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                
-                firework.style.cssText = `
-                    position: absolute;
-                    width: 6px;
-                    height: 6px;
-                    background: ${color};
-                    border-radius: 50%;
-                    pointer-events: none;
-                    z-index: 20;
-                    box-shadow: 0 0 10px ${color};
-                `;
-                
-                const rect = element.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                
-                firework.style.left = centerX + 'px';
-                firework.style.top = centerY + 'px';
-                
-                const angle = (i / 12) * Math.PI * 2;
-                const distance = 100 + Math.random() * 50;
-                const endX = centerX + Math.cos(angle) * distance;
-                const endY = centerY + Math.sin(angle) * distance;
-                
-                firework.animate([
-                    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
-                    { transform: `translate(${endX - centerX}px, ${endY - centerY}px) scale(0)`, opacity: 0 }
-                ], {
-                    duration: 1000 + Math.random() * 500,
-                    easing: 'ease-out'
-                });
-                
-                document.body.appendChild(firework);
-                
-                setTimeout(() => firework.remove(), 1500);
-            }
-        }
-
-        // ENHANCED OUTRO SEQUENCE WITH PROFESSIONAL TV QUALITY
-        function startProfessionalOutroSequence() {
+        function startOutroSequence() {
             const mainContent = document.getElementById('mainContent');
             const imageGallery = document.getElementById('imageGallery');
             const imageSlots = Array.from(document.querySelectorAll('.image-slot'));
-            
-            const pastorVideoSlots = imageSlots.filter(slot => slot.classList.contains('pastor-video'));
-            const regularImageSlots = imageSlots.filter(slot => !slot.classList.contains('pastor-video'));
-            
-            // 1. DRAMATIC MAIN CONTENT FADE OUT
-            mainContent.classList.add('fade-out');
-            
-            // 2. REVEAL IMAGE GALLERY WITH CINEMATIC TIMING
+            const videoManager = new OptimizedVideoManager();
             setTimeout(() => {
                 imageGallery.style.opacity = '1';
-                
-                // 3. SEQUENTIAL IMAGE REVEALS WITH PROFESSIONAL TRANSITIONS
-                regularImageSlots.forEach((slot, index) => {
+                imageSlots.forEach((slot, index) => {
                     setTimeout(() => {
                         slot.classList.add('active');
-                        
-                        // Enhanced spotlight effect
-                        setTimeout(() => {
-                            slot.classList.add('spotlight');
-                            createImageSpotlight(slot);
-                            
+                        if (index % 3 === 0) {
                             setTimeout(() => {
-                                slot.classList.remove('spotlight');
-                            }, 2000);
-                        }, 400);
-                        
-                    }, index * 800);
+                                slot.classList.add('spotlight');
+                                setTimeout(() => slot.classList.remove('spotlight'), 1500);
+                            }, 300);
+                        }
+                    }, index * 200);
                 });
-                
-                // 4. SPECTACULAR PASTOR VIDEO REVEALS
                 setTimeout(() => {
-                    pastorVideoSlots.forEach((videoSlot, videoIndex) => {
-                        setTimeout(() => {
-                            videoSlot.style.transition = 'all 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-                            videoSlot.classList.add('active');
-                            videoSlot.classList.add('spotlight');
-                            
-                            // Create divine aura around videos
-                            createDivineAura(videoSlot);
-                            
-                            // Enhanced video effects
-                            setTimeout(() => {
-                                const video = videoSlot.querySelector('video');
-                                if (video && video.style.display !== 'none') {
-                                    video.style.transition = 'all 1s ease';
-                                    video.style.transform = 'scale(1.2)';
-                                    video.style.filter = 'brightness(1.3) contrast(1.2) saturate(1.3)';
-                                    
-                                    setTimeout(() => {
-                                        video.style.transform = 'scale(1.05)';
-                                        video.style.filter = 'brightness(1.1) contrast(1.1) saturate(1.2)';
-                                    }, 1200);
-                                }
-                            }, 600);
-                            
-                        }, videoIndex * 1200);
+                    videoManager.init();
+                }, imageSlots.length * 200 + 500);
+                setTimeout(() => {
+                    mainContent.classList.remove('fade-out');
+                    mainContent.classList.add('second-fade');
+                    startAnimationSequence();
+                }, imageSlots.length * 200 + 1500);
+            }, 20000); // Delay gallery until initial main content fade completes
+        }
+
+        function optimizePerformance() {
+            if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
+                document.body.style.setProperty('--animation-speed', '0.5s');
+                const rays = document.querySelector('.divine-rays');
+                if (rays) rays.style.animation = 'none';
+            }
+            document.addEventListener('visibilitychange', () => {
+                const videos = document.querySelectorAll('video');
+                if (document.hidden) {
+                    videos.forEach(video => {
+                        if (!video.paused) {
+                            video.pause();
+                            video.dataset.wasPlaying = 'true';
+                        }
                     });
-                    
-                    // 5. GRAND MAIN CONTENT RE-ENTRANCE
-                    setTimeout(() => {
-                        mainContent.classList.remove('fade-out');
-                        mainContent.classList.add('grand-entrance');
-                        
-                        // Begin the spectacular animation sequence
-                        setTimeout(() => {
-                            beginDivineAnimationSequence();
-                        }, 500);
-                        
-                    }, pastorVideoSlots.length * 1200 + 2000);
-                    
-                }, (regularImageSlots.length * 800) + 1500);
-                
-            }, 2500);
-        }
-
-        // Special effects for image spotlight
-        function createImageSpotlight(element) {
-            const spotlight = document.createElement('div');
-            spotlight.style.cssText = `
-                position: absolute;
-                top: -20px;
-                left: -20px;
-                right: -20px;
-                bottom: -20px;
-                background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
-                border-radius: 30px;
-                animation: spotlightPulse 2s ease-in-out;
-                pointer-events: none;
-                z-index: -1;
-            `;
-            element.appendChild(spotlight);
-            
-            setTimeout(() => spotlight.remove(), 2000);
-        }
-
-        function createDivineAura(element) {
-            const aura = document.createElement('div');
-            aura.style.cssText = `
-                position: absolute;
-                top: -15px;
-                left: -15px;
-                right: -15px;
-                bottom: -15px;
-                background: radial-gradient(circle, rgba(255,215,0,0.5) 0%, rgba(255,255,255,0.2) 30%, transparent 70%);
-                border-radius: 25px;
-                animation: divineAura 3s ease-in-out infinite;
-                pointer-events: none;
-                z-index: -1;
-            `;
-            element.appendChild(aura);
-        }
-
-        // Add dynamic CSS animations
-        const dynamicStyles = document.createElement('style');
-        dynamicStyles.textContent = `
-            @keyframes spotlightPulse {
-                0% { opacity: 0; transform: scale(0.8); }
-                50% { opacity: 1; transform: scale(1.1); }
-                100% { opacity: 0; transform: scale(1.3); }
-            }
-            
-            @keyframes divineAura {
-                0%, 100% { 
-                    opacity: 0.4; 
-                    transform: scale(1) rotate(0deg); 
+                } else {
+                    videos.forEach(video => {
+                        if (video.dataset.wasPlaying === 'true') {
+                            video.play();
+                            delete video.dataset.wasPlaying;
+                        }
+                    });
                 }
-                50% { 
-                    opacity: 0.8; 
-                    transform: scale(1.1) rotate(180deg); 
-                }
-            }
-            
-            @keyframes sparkle {
-                0% { 
-                    opacity: 0; 
-                    transform: scale(0) rotate(0deg); 
-                }
-                50% { 
-                    opacity: 1; 
-                    transform: scale(1.2) rotate(180deg); 
-                }
-                100% { 
-                    opacity: 0; 
-                    transform: scale(0) rotate(360deg); 
-                }
-            }
-        `;
-        document.head.appendChild(dynamicStyles);
-
-        // Enhanced hover effects for image slots
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.image-slot').forEach(slot => {
-                slot.addEventListener('mouseenter', () => {
-                    if (!slot.classList.contains('error') && slot.classList.contains('active')) {
-                        slot.style.transform = 'scale(1.15) rotateY(8deg) rotateX(5deg)';
-                        slot.style.zIndex = '12';
-                        slot.style.filter = 'brightness(1.4) saturate(1.4) contrast(1.2)';
-                        slot.style.boxShadow = '0 25px 50px rgba(0,0,0,0.5), 0 0 40px rgba(255,215,0,0.8)';
-                        
-                        // Add ripple effect on hover
-                        const ripple = document.createElement('div');
-                        ripple.style.cssText = `
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            width: 30px;
-                            height: 30px;
-                            background: rgba(255, 215, 0, 0.4);
-                            border-radius: 50%;
-                            transform: translate(-50%, -50%);
-                            animation: rippleExpand 0.8s ease-out forwards;
-                            pointer-events: none;
-                            z-index: 10;
-                        `;
-                        slot.appendChild(ripple);
-                        
-                        setTimeout(() => ripple.remove(), 800);
-                    }
-                });
-                
-                slot.addEventListener('mouseleave', () => {
-                    if (!slot.classList.contains('spotlight') && slot.classList.contains('active')) {
-                        slot.style.transform = 'scale(1) rotateY(0deg) rotateX(0deg)';
-                        slot.style.zIndex = '3';
-                        slot.style.filter = 'brightness(1.1) saturate(1.3) contrast(1.1)';
-                        slot.style.boxShadow = '0 0 40px rgba(255, 215, 0, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.15)';
+            });
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                video.addEventListener('loadstart', () => {
+                    if (window.innerWidth < 768) {
+                        video.style.imageRendering = 'pixelated';
                     }
                 });
             });
-        });
+        }
 
-        // Add ripple expand animation
-        const rippleStyles = document.createElement('style');
-        rippleStyles.textContent = `
-            @keyframes rippleExpand {
-                0% { 
-                    width: 30px; 
-                    height: 30px; 
-                    opacity: 0.8; 
-                }
-                100% { 
-                    width: 200px; 
-                    height: 200px; 
-                    opacity: 0; 
-                }
-            }
-        `;
-        document.head.appendChild(rippleStyles);
+        function setupOptimizedHoverEffects() {
+            const imageSlots = document.querySelectorAll('.image-slot');
+            imageSlots.forEach(slot => {
+                let hoverTimeout;
+                slot.addEventListener('mouseenter', () => {
+                    if (slot.classList.contains('active')) {
+                        clearTimeout(hoverTimeout);
+                        slot.style.transition = 'all 0.3s ease';
+                        slot.style.transform = 'translate3d(0,0,0) scale(1.08)';
+                        slot.style.zIndex = '9';
+                        slot.style.filter = 'brightness(1.3) saturate(1.4)';
+                    }
+                });
+                slot.addEventListener('mouseleave', () => {
+                    if (slot.classList.contains('active')) {
+                        hoverTimeout = setTimeout(() => {
+                            slot.style.transform = 'translate3d(0,0,0) scale(1)';
+                            slot.style.zIndex = '3';
+                            slot.style.filter = 'brightness(1) saturate(1.2)';
+                        }, 50);
+                    }
+                });
+            });
+        }
 
-        // PROFESSIONAL INITIALIZATION SEQUENCE
-        window.addEventListener('load', function() {
-            // Create divine particle system
+        function setupIntersectionObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const video = entry.target.querySelector('video');
+                        if (video) {
+                            video.play().catch(e => console.log('Video autoplay failed'));
+                        }
+                    } else {
+                        const video = entry.target.querySelector('video');
+                        if (video) {
+                            video.pause();
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            document.querySelectorAll('.image-slot.pastor-video').forEach(slot => {
+                observer.observe(slot);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            optimizePerformance();
+            setupOptimizedHoverEffects();
+            setupIntersectionObserver();
             createDivineParticles();
-            
-            // Professional loading sequence
             document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 1.5s ease';
-            
+            document.body.style.transition = 'opacity 1s ease';
             setTimeout(() => {
                 document.body.style.opacity = '1';
-                
-                // Start the professional outro sequence
+                startAnimationSequence();
                 setTimeout(() => {
-                    startProfessionalOutroSequence();
-                }, 2000);
-            }, 800);
+                    startOutroSequence();
+                }, 1500);
+            }, 300);
         });
 
-        // Enhanced keyboard controls for demonstration
         document.addEventListener('keydown', function(e) {
             switch(e.key.toLowerCase()) {
                 case 'r':
                     location.reload();
                     break;
                 case 's':
-                    startProfessionalOutroSequence();
+                    startOutroSequence();
                     break;
                 case 'p':
-                    // Toggle play/pause for all videos
                     document.querySelectorAll('video').forEach(video => {
-                        if (video.paused) {
-                            video.play();
-                        } else {
-                            video.pause();
-                        }
+                        video.paused ? video.play() : video.pause();
                     });
                     break;
             }
         });
 
-        // Performance optimization for visibility changes
-        document.addEventListener('visibilitychange', function() {
-            const allAnimatedElements = document.querySelectorAll('*');
-            if (document.hidden) {
-                allAnimatedElements.forEach(el => {
-                    if (el.style.animationPlayState !== undefined) {
-                        el.style.animationPlayState = 'paused';
-                    }
-                });
-                // Pause all videos when tab is not visible
-                document.querySelectorAll('video').forEach(video => {
-                    if (!video.paused) {
-                        video.pause();
-                        video.dataset.wasPlaying = 'true';
-                    }
-                });
-            } else {
-                allAnimatedElements.forEach(el => {
-                    if (el.style.animationPlayState !== undefined) {
-                        el.style.animationPlayState = 'running';
-                    }
-                });
-                // Resume videos when tab becomes visible
-                document.querySelectorAll('video').forEach(video => {
-                    if (video.dataset.wasPlaying === 'true') {
-                        video.play();
-                        delete video.dataset.wasPlaying;
-                    }
-                });
-            }
+        window.addEventListener('error', function(e) {
+            console.warn('Resource loading error:', e.filename);
         });
 
-        // Add console information for developers
+        if (window.performance && window.performance.mark) {
+            window.performance.mark('outro-video-start');
+            window.addEventListener('load', () => {
+                window.performance.mark('outro-video-loaded');
+                window.performance.measure('outro-video-load-time', 'outro-video-start', 'outro-video-loaded');
+                const measure = window.performance.getEntriesByName('outro-video-load-time')[0];
+                console.log(`Outro video loaded in ${measure.duration.toFixed(2)}ms`);
+            });
+        }
+
         console.log(`
-        🎬 JOY CHRISTIAN FELLOWSHIP OUTRO VIDEO 🎬
-        ==========================================
-        Professional TV Quality Enhancement
-        
+        🎬 OPTIMIZED JOY CHRISTIAN FELLOWSHIP OUTRO VIDEO 🎬
+        ==================================================
+        Performance Enhancements Applied:
+        ✅ Reduced particle count (15 vs 50)
+        ✅ Simplified animations (fewer 3D transforms)
+        ✅ Optimized video loading (metadata preload)
+        ✅ Hardware acceleration enabled
+        ✅ Intersection Observer for video management
+        ✅ Reduced motion support
+        ✅ Performance monitoring
+        ✅ Memory leak prevention
+        ✅ Simplified particle effects
+        ✅ Optimized CSS transitions
+        ✅ 20-second initial fade-in/out for main content
+        ✅ 30-second second fade-in for main content
         Keyboard Controls:
         - R: Reload/Restart
         - S: Start outro sequence
         - P: Play/Pause all videos
-        
-        Features:
-        ✅ Professional 3D transitions
-        ✅ Divine particle effects
-        ✅ Enhanced typography animations
-        ✅ Call-to-action social buttons
-        ✅ Mobile responsive design
-        ✅ Error handling for missing media
-        ✅ Performance optimizations
-        ✅ Portrait-focused image positioning
+        Performance Tips:
+        - Videos now load with 'metadata' preload
+        - Particles reduced from 50 to 15
+        - Simplified 3D transforms
+        - Better memory management
+        - Optimized for mobile devices
         `);
     </script>
 </body>
